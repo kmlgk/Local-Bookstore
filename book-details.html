@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="dbPageTitle">Book Details | The Gilded Spine</title>
+<meta id="dbPageDesc" name="description" content="Book details at The Gilded Spine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Karla:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<script>try { if (localStorage.getItem('tgs-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl'); } catch (e) {}</script>
+</head>
+<body>
+<script>try { if (localStorage.getItem('tgs-theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}</script>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="loader"><div class="loader-mark">The Gilded Spine</div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-left">
+      <span data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <span>118 Elm Street, Millbrook, VT</span>
+      <span>(802) 555-0148</span>
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container masthead-row">
+    <div class="masthead-logo">
+      <a href="index.html">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></a>
+    </div>
+    <nav class="nav-cluster" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html">Home 1</a>
+          <a href="home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a class="nav-link active" href="books.html">Books</a>
+      <a class="nav-link" href="genres.html">Genres</a>
+      <a class="nav-link" href="events.html">Events</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="blog.html">Journal</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <div class="masthead-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <a href="special-orders.html" class="btn btn-primary btn-sm request-btn">Request a Book</a>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <span class="logo">The Gilded Spine</span>
+    <div class="mobile-nav-top-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <button class="mobile-nav-close" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-nav-links" aria-label="Mobile navigation">
+    <a href="index.html">Home 1</a>
+    <a href="home-2.html">Home 2</a>
+    <a href="books.html">Books</a>
+    <a href="genres.html">Genres</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-nav-foot">
+    <a href="special-orders.html" class="btn btn-primary btn-block">Request a Book</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-banner" style="padding-bottom:40px;">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="books.html">Books</a> / <a href="#" id="dbBreadcrumbGenre">Genre</a> / <span id="dbBreadcrumbTitle">Book</span></div>
+    </div>
+  </section>
+
+  <section style="padding-top:50px;">
+    <div class="container detail-grid">
+      <div class="detail-cover" id="dbCover">
+        <span class="spine-tag" id="dbBadge" style="position:absolute;top:20px;left:20px;"></span>
+        <span class="cover-title" id="dbCoverTitle"></span>
+      </div>
+      <div>
+        <span class="genre-label" id="dbGenreLabel" style="font-size:.8rem;"></span>
+        <h1 id="dbTitle" style="margin-top:6px;"></h1>
+        <p class="text-soft" style="font-size:1.05rem;">by <strong id="dbAuthor"></strong></p>
+        <div class="detail-meta">
+          <span class="chip" id="dbFormatChip"></span>
+          <span class="chip" id="dbPublisherChip"></span>
+          <span class="chip" id="dbIsbnChip"></span>
+          <span class="chip">★ 4.8 (216 reviews)</span>
+        </div>
+        <p id="dbDesc1" style="font-size:1.05rem;"></p>
+        <div class="detail-meta">
+          <span class="spine-price" id="dbPrice" style="font-size:1.4rem;"></span>
+        </div>
+        <div class="hero-book-cta" style="margin-top:6px;">
+          <button class="btn btn-primary" data-reserve-btn type="button">Reserve In Store</button>
+          <a href="special-orders.html" class="btn btn-outline">Order for Shipping</a>
+        </div>
+        <p class="field-hint mt-24">Reserved copies hold at the register for 3 days, no payment required until pickup.</p>
+
+        <div class="detail-tabs">
+          <button class="detail-tab-btn active" data-tab-target="tabDesc">Description</button>
+          <button class="detail-tab-btn" data-tab-target="tabDetails">Details</button>
+          <button class="detail-tab-btn" data-tab-target="tabReviews">Reviews</button>
+        </div>
+        <div class="detail-tab-pane active" id="tabDesc">
+          <p class="article-body" id="dbDescBody1" style="font-size:.98rem;"></p>
+        </div>
+        <div class="detail-tab-pane" id="tabDetails">
+          <table style="width:100%;font-size:.92rem;border-collapse:collapse;">
+            <tbody>
+              <tr><td style="padding:8px 0;color:var(--ink-soft);">Format</td><td style="padding:8px 0;" id="dbFormat"></td></tr>
+              <tr style="border-top:1px dashed var(--border);"><td style="padding:8px 0;color:var(--ink-soft);">Pages</td><td style="padding:8px 0;" id="dbPages"></td></tr>
+              <tr style="border-top:1px dashed var(--border);"><td style="padding:8px 0;color:var(--ink-soft);">Publisher</td><td style="padding:8px 0;" id="dbPublisher"></td></tr>
+              <tr style="border-top:1px dashed var(--border);"><td style="padding:8px 0;color:var(--ink-soft);">Published</td><td style="padding:8px 0;" id="dbPublished"></td></tr>
+              <tr style="border-top:1px dashed var(--border);"><td style="padding:8px 0;color:var(--ink-soft);">Language</td><td style="padding:8px 0;">English</td></tr>
+              <tr style="border-top:1px dashed var(--border);"><td style="padding:8px 0;color:var(--ink-soft);">ISBN</td><td style="padding:8px 0;font-family:var(--font-mono);" id="dbIsbn"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="detail-tab-pane" id="tabReviews">
+          <div class="quote-card" style="border-bottom:1px solid var(--border);margin-bottom:16px;">
+            <div class="stars">★★★★★</div>
+            <blockquote>Read it in two sittings. Couldn't put it down once I started.</blockquote>
+            <div class="byline"><span class="avatar" style="background:#25303f;">RH</span><div><strong>Rae H.</strong><span>Verified purchase</span></div></div>
+          </div>
+          <div class="quote-card" style="border-bottom:1px solid var(--border);">
+            <div class="stars">★★★★☆</div>
+            <blockquote>Slow start, but it earned the ending completely.</blockquote>
+            <div class="byline"><span class="avatar" style="background:#5c5230;">TN</span><div><strong>Theo N.</strong><span>Verified purchase</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container" style="max-width:900px;">
+      <div class="staff-note reveal-fade">
+        <span class="staff-note-avatar" id="dbNoteAvatar"></span>
+        <div class="staff-note-body">
+          <h3>A Note From the Shelf</h3>
+          <p id="dbNoteText"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-photo" id="dbGenreBand">
+    <div class="container">
+      <div class="inner reveal-fade">
+        <span class="kicker" id="dbGenreBandKicker">Why We Love This Section</span>
+        <h2 id="dbGenreBandHeading"></h2>
+        <p id="dbGenreBandText"></p>
+        <a href="books.html" id="dbGenreBandCta" class="btn btn-gold mt-24">Browse the Section</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="stitch-divider" viewBox="0 0 1200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7 H1200"/></svg>
+  <div class="container footer-top">
+    <div class="brand-block">
+      <div class="logo">The Gilded Spine</div>
+      <p>An independent bookshop for readers who like getting recommendations from real people, not algorithms.</p>
+      <span class="footer-status" data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Journal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Genres</h5>
+      <ul>
+        <li><a href="books.html#literary-fiction">Literary Fiction</a></li>
+        <li><a href="books.html#mystery-thriller">Mystery &amp; Thriller</a></li>
+        <li><a href="books.html#history-ideas">History &amp; Ideas</a></li>
+        <li><a href="books.html#childrens">Children's</a></li>
+        <li><a href="books.html#new-arrivals">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Help</h5>
+      <ul>
+        <li><a href="special-orders.html">Request a Book</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html#faq">FAQ</a></li>
+        <li><a href="404.html">404 Example</a></li>
+        <li><a href="coming-soon.html">Coming Soon</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h5>Reader's Circle</h5>
+      <p style="font-size:.85rem;color:#b9a993;margin-bottom:14px;">Monthly staff picks &amp; event invites in your inbox.</p>
+      <form data-validate data-success-target="#footerFormSuccess" novalidate>
+        <div class="field" style="margin-bottom:8px;">
+          <input type="email" required placeholder="you@email.com" aria-label="Email address">
+          <span class="field-error" role="alert">Enter a valid email address.</span>
+        </div>
+        <button type="submit" class="btn btn-gold btn-sm btn-block">Subscribe</button>
+      </form>
+      <p id="footerFormSuccess" class="form-success" style="padding:10px 0;text-align:left;font-size:.85rem;color:#d9cbb8;">Thanks — check your inbox to confirm.</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 The Gilded Spine Booksellers. All rights reserved.</span>
+    <span>Millbrook, Vermont</span>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top" type="button"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="assets/js/books-data.js"></script>
+<script src="assets/js/main.js" defer></script>
+<script>
+(function () {
+  function renderBook() {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    var book = (typeof TGS_BOOKS !== 'undefined' && TGS_BOOKS[id]) ? TGS_BOOKS[id] : null;
+    var fallbackId = 'last-ferry-to-greywater';
+    if (!book && typeof TGS_BOOKS !== 'undefined') { book = TGS_BOOKS[fallbackId]; id = fallbackId; }
+    if (!book) return;
+
+    document.title = book.title + ' — Book Details | The Gilded Spine';
+    var descMeta = document.getElementById('dbPageDesc');
+    if (descMeta) descMeta.setAttribute('content', book.title + ' by ' + book.author + ' — ' + book.genreLabel + ' at The Gilded Spine. ' + book.desc);
+
+    var coverUrl = 'https://images.unsplash.com/' + book.photo + '?auto=format&fit=crop&w=700&q=70';
+    var cover = document.getElementById('dbCover');
+    cover.style.backgroundImage = "url('" + coverUrl + "')";
+    cover.style.backgroundSize = 'cover';
+    cover.style.backgroundPosition = 'center';
+
+    var badgeEl = document.getElementById('dbBadge');
+    if (book.badge) { badgeEl.textContent = book.badge; badgeEl.style.display = ''; } else { badgeEl.style.display = 'none'; }
+
+    document.getElementById('dbCoverTitle').textContent = book.title;
+    document.getElementById('dbGenreLabel').textContent = book.genreLabel;
+    document.getElementById('dbTitle').textContent = book.title;
+    document.getElementById('dbAuthor').textContent = book.author;
+    document.getElementById('dbFormatChip').textContent = book.format + ' · ' + book.pages + 'pp';
+    document.getElementById('dbPublisherChip').textContent = book.publisher;
+    document.getElementById('dbIsbnChip').textContent = 'ISBN ' + book.isbn;
+    document.getElementById('dbDesc1').textContent = book.desc;
+    document.getElementById('dbPrice').textContent = '$' + book.price;
+    document.getElementById('dbDescBody1').textContent = book.desc;
+    document.getElementById('dbNoteText').textContent = book.desc2;
+    var NOTE_STAFF = {
+      'literary-fiction': { i: 'EM', c: '#6e2439' }, 'mystery-thriller': { i: 'SW', c: '#25303f' },
+      'history-ideas': { i: 'DO', c: '#5c5230' }, 'childrens': { i: 'PN', c: '#1f6f6b' },
+      'poetry': { i: 'EM', c: '#5b3a66' }, 'new-arrivals': { i: 'SW', c: '#8f6527' }
+    };
+    var staffTag = NOTE_STAFF[book.genreSlug] || NOTE_STAFF['literary-fiction'];
+    document.getElementById('dbNoteAvatar').textContent = staffTag.i;
+    document.getElementById('dbNoteAvatar').style.background = staffTag.c;
+    document.getElementById('dbFormat').textContent = book.format;
+    document.getElementById('dbPages').textContent = book.pages;
+    document.getElementById('dbPublisher').textContent = book.publisher;
+    document.getElementById('dbPublished').textContent = book.published;
+    document.getElementById('dbIsbn').textContent = book.isbn;
+
+    var genreCrumb = document.getElementById('dbBreadcrumbGenre');
+    genreCrumb.textContent = book.genreLabel;
+    genreCrumb.setAttribute('href', 'books.html#' + book.genreSlug);
+    document.getElementById('dbBreadcrumbTitle').textContent = book.title;
+
+    // genre mood band — image + editorial text instead of a related-cards row
+    var GENRE_BAND = {
+      'literary-fiction': { photo: 'photo-1495474472287-4d71bcdd2085', kicker: 'Why We Love Literary Fiction', heading: 'The books that make you sit in the car a few extra minutes.', text: 'Not the ones with the loudest plots — the ones that get quietly under your skin and stay there through the drive home.' },
+      'mystery-thriller': { photo: 'photo-1519681393784-d120267933ba', kicker: 'Why We Love Mystery & Thriller', heading: 'The genre most responsible for our staff’s poor sleep schedules.', text: '"Just one more chapter" has never once been true in this section, and we wouldn’t have it any other way.' },
+      'history-ideas': { photo: 'photo-1476820865390-c52aeebb9891', kicker: 'Why We Love History & Ideas', heading: 'Come for the facts, stay for the realization nothing is new.', text: 'Every strange thing happening now has happened before, usually with worse hats. History section regulars know this better than anyone.' },
+      'childrens': { photo: 'photo-1441974231531-c6227db76b6e', kicker: 'Why We Love Children’s Books', heading: 'The only section reviewed entirely in repeat requests.', text: 'The real five-star review is a kid asking for the same book again tomorrow night. This shelf gets a lot of those.' },
+      'poetry': { photo: 'photo-1419242902214-272b3f66ee7a', kicker: 'Why We Love Poetry', heading: 'Ten good lines can outlast three hundred forgettable pages.', text: 'Our smallest section, and the one we’d protect first if the shop were on fire. Genuinely.' },
+      'new-arrivals': { photo: 'photo-1523712999610-f77fbcfc3843', kicker: 'What’s New', heading: 'We restock every Tuesday. This is what made the cut.', text: 'Every arrival gets read by at least one bookseller before it goes on the table — nothing lands here by accident.' }
+    };
+    var bandData = GENRE_BAND[book.genreSlug] || GENRE_BAND['literary-fiction'];
+    var bandUrl = 'https://images.unsplash.com/' + bandData.photo + '?auto=format&fit=crop&w=1800&q=70';
+    document.getElementById('dbGenreBand').style.backgroundImage = "url('" + bandUrl + "')";
+    document.getElementById('dbGenreBandKicker').textContent = bandData.kicker;
+    document.getElementById('dbGenreBandHeading').textContent = bandData.heading;
+    document.getElementById('dbGenreBandText').textContent = bandData.text;
+    document.getElementById('dbGenreBandCta').setAttribute('href', 'books.html#' + book.genreSlug);
+    document.getElementById('dbGenreBandCta').textContent = 'Browse ' + book.genreLabel;
+
+    document.querySelectorAll('.reveal, .reveal-fade').forEach(function (el) { el.classList.add('in'); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderBook);
+  else renderBook();
+})();
+</script>
+</body>
+</html>

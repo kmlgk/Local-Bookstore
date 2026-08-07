@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home 2 — The Gilded Spine Bookshop</title>
+<meta name="description" content="Browse The Gilded Spine's card-catalog style homepage — jump straight into a genre, meet our bookseller of the month, and see this week's new arrivals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Karla:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<script>
+  try { if (localStorage.getItem('tgs-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl'); } catch (e) {}
+</script>
+</head>
+<body>
+<script>
+  try { if (localStorage.getItem('tgs-theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}
+</script>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="loader"><div class="loader-mark">The Gilded Spine</div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-left">
+      <span data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <span>118 Elm Street, Millbrook, VT</span>
+      <span>(802) 555-0148</span>
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container masthead-row">
+    <div class="masthead-logo">
+      <a href="index.html">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></a>
+    </div>
+    <nav class="nav-cluster" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html">Home 1</a>
+          <a href="home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a class="nav-link" href="books.html">Books</a>
+      <a class="nav-link" href="genres.html">Genres</a>
+      <a class="nav-link" href="events.html">Events</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="blog.html">Journal</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <div class="masthead-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <a href="special-orders.html" class="btn btn-primary btn-sm request-btn">Request a Book</a>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <span class="logo">The Gilded Spine</span>
+    <div class="mobile-nav-top-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <button class="mobile-nav-close" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-nav-links" aria-label="Mobile navigation">
+    <a href="index.html">Home 1</a>
+    <a href="home-2.html">Home 2</a>
+    <a href="books.html">Books</a>
+    <a href="genres.html">Genres</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-nav-foot">
+    <a href="special-orders.html" class="btn btn-primary btn-block">Request a Book</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- HERO 2 — Card Catalog (graphic, no photography) -->
+  <section class="hero-catalog">
+    <div class="container">
+      <div class="section-head reveal-fade" style="margin-bottom:28px;">
+        <span class="kicker">The Card Catalog</span>
+        <h1 style="font-size:clamp(1.9rem,3.6vw,2.7rem);max-width:640px;">Pull a drawer. Find a genre. Skip the algorithm.</h1>
+      </div>
+      <div class="catalog-grid">
+        <a href="books.html#literary-fiction" class="catalog-drawer reveal-fade" style="background-image:linear-gradient(180deg,rgba(217,195,154,.72),rgba(199,171,120,.82)),url('https://images.unsplash.com/photo-1490633874781-1c63cc424610?auto=format&fit=crop&w=400&q=65');"><span class="pull"></span><span class="label">Literary Fiction</span><span class="count">312 titles</span></a>
+        <a href="books.html#mystery-thriller" class="catalog-drawer reveal-fade" style="background-image:linear-gradient(180deg,rgba(217,195,154,.72),rgba(199,171,120,.82)),url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=400&q=65');"><span class="pull"></span><span class="label">Mystery &amp; Thriller</span><span class="count">248 titles</span></a>
+        <a href="books.html#history-ideas" class="catalog-drawer reveal-fade" style="background-image:linear-gradient(180deg,rgba(217,195,154,.72),rgba(199,171,120,.82)),url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=65');"><span class="pull"></span><span class="label">History &amp; Ideas</span><span class="count">190 titles</span></a>
+
+        <div class="catalog-main reveal">
+          <div>
+            <span class="kicker">Bookseller-Curated, Not Computer-Sorted</span>
+            <h1>Every drawer in this catalog was sorted by a real person who read the book.</h1>
+            <p>Six shelves, one dusty rare-books nook, and a request desk that treats "I don't know the title but the cover was blue" as a completely reasonable place to start.</p>
+            <div class="hero-book-cta" style="margin-top:22px;">
+              <a href="books.html" class="btn btn-gold">Open the Catalog</a>
+              <a href="genres.html" class="btn btn-ghost-light">Browse by Genre</a>
+            </div>
+          </div>
+          <div class="catalog-checked">
+            <span class="kicker" style="color:#e7c98a;">Checked Out Today</span>
+            <div class="mini-spine"><span class="swatch" style="background:#8f6527;"></span><span><strong>The Wren King</strong><span>Bastian Voss</span></span></div>
+            <div class="mini-spine"><span class="swatch" style="background:#1f6f6b;"></span><span><strong>Pip and the Paper Forest</strong><span>Junie Alders</span></span></div>
+            <div class="mini-spine"><span class="swatch" style="background:#25303f;"></span><span><strong>Six Missing Hours</strong><span>Danilo Reyes</span></span></div>
+          </div>
+        </div>
+
+        <a href="books.html#childrens" class="catalog-drawer reveal-fade" style="background-image:linear-gradient(180deg,rgba(217,195,154,.72),rgba(199,171,120,.82)),url('https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?auto=format&fit=crop&w=400&q=65');"><span class="pull"></span><span class="label">Children's</span><span class="count">156 titles</span></a>
+        <a href="books.html#poetry" class="catalog-drawer reveal-fade" style="background-image:linear-gradient(180deg,rgba(217,195,154,.72),rgba(199,171,120,.82)),url('https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=400&q=65');"><span class="pull"></span><span class="label">Poetry</span><span class="count">88 titles</span></a>
+        <a href="books.html#new-arrivals" class="catalog-drawer reveal-fade" style="background-image:linear-gradient(180deg,rgba(217,195,154,.72),rgba(199,171,120,.82)),url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=400&q=65');"><span class="pull"></span><span class="label">New Arrivals</span><span class="count">24 titles</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOOD PICKER -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal-fade">
+        <span class="kicker">Not Sure Where to Start?</span>
+        <h2>Tell us the mood. We'll point at a shelf.</h2>
+      </div>
+      <div class="drawer-grid">
+        <a href="books.html#history-ideas" class="drawer-tab reveal-fade" style="background:linear-gradient(150deg,#5c5230,#7c6f42);">
+          <span class="tag">Slow Sunday</span><h3>Something Cozy</h3><p>Warm, character-driven, no rush</p>
+        </a>
+        <a href="books.html#mystery-thriller" class="drawer-tab reveal-fade" style="background:linear-gradient(150deg,#25303f,#3a4a5e);">
+          <span class="tag">Can't Put It Down</span><h3>Something Fast-Paced</h3><p>Twists, deadlines, one sitting</p>
+        </a>
+        <a href="books.html#literary-fiction" class="drawer-tab reveal-fade" style="background:linear-gradient(150deg,#6e2439,#8c3a52);">
+          <span class="tag">Bring Tissues</span><h3>Something to Cry About</h3><p>Beautifully, deliberately sad</p>
+        </a>
+        <a href="books.html#childrens" class="drawer-tab reveal-fade" style="background:linear-gradient(150deg,#1f6f6b,#2f9a8f);">
+          <span class="tag">Ages 3–10</span><h3>Something for the Kids</h3><p>Read-alouds &amp; early chapter books</p>
+        </a>
+        <a href="books.html#new-arrivals" class="drawer-tab reveal-fade" style="background:linear-gradient(150deg,#8f6527,#b8863e);">
+          <span class="tag">Big Ideas</span><h3>Something Smart</h3><p>Nonfiction that changes how you think</p>
+        </a>
+        <a href="books.html#poetry" class="drawer-tab reveal-fade" style="background:linear-gradient(150deg,#5b3a66,#7c5490);">
+          <span class="tag">Light on Its Feet</span><h3>Something Funny</h3><p>Wit, warmth, and short chapters</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKSELLER SPOTLIGHT -->
+  <section style="background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container grid-2">
+      <div class="rounded-photo reveal" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80');" role="img" aria-label="Portrait of Elena Marsh, owner and head bookseller"></div>
+      <div class="reveal-fade">
+        <span class="kicker">Bookseller of the Month</span>
+        <h2>Elena's been wrong about a book exactly twice.</h2>
+        <p class="text-soft">"People assume we just stock what's popular. Honestly, half our staff-picks shelf is stuff I bought with my own paycheck because I couldn't stop talking about it. This month it's <strong>The Understory</strong> — I've made four different customers cry at the register and I regret nothing."</p>
+        <p style="font-family:var(--font-display);font-weight:700;margin-top:18px;">Elena Marsh<br><span class="text-soft" style="font-weight:400;font-size:.9rem;font-family:var(--font-body);">Owner &amp; Head Bookseller, specializes in Literary Fiction</span></p>
+        <a href="about.html" class="btn btn-outline mt-24">Meet the Whole Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS — typographic list, no cards -->
+  <section>
+    <div class="container wrap-narrow">
+      <div class="section-head reveal-fade">
+        <span class="kicker">This Week's Arrivals</span>
+        <h2>Fresh off the delivery truck.</h2>
+      </div>
+      <div class="arrivals-list">
+        <a href="book-details.html?id=understory" class="arrivals-row reveal-fade">
+          <div class="an-left"><span class="an-num">01</span><div class="an-text"><span class="an-title">The Understory</span><span class="an-meta">Callum Ness &middot; <span class="an-genre">Literary Fiction</span></span></div></div>
+          <div class="an-right"><span class="an-price">$25.00</span><span class="an-arrow">&rarr;</span></div>
+        </a>
+        <a href="book-details.html?id=nine-days-in-rennwick" class="arrivals-row reveal-fade">
+          <div class="an-left"><span class="an-num">02</span><div class="an-text"><span class="an-title">Nine Days in Rennwick</span><span class="an-meta">Adaeze Obi &middot; <span class="an-genre">Mystery &amp; Thriller</span></span></div></div>
+          <div class="an-right"><span class="an-price">$24.50</span><span class="an-arrow">&rarr;</span></div>
+        </a>
+        <a href="book-details.html?id=wren-king" class="arrivals-row reveal-fade">
+          <div class="an-left"><span class="an-num">03</span><div class="an-text"><span class="an-title">The Wren King</span><span class="an-meta">Bastian Voss &middot; <span class="an-genre">Fantasy</span></span></div></div>
+          <div class="an-right"><span class="an-price">$27.00</span><span class="an-arrow">&rarr;</span></div>
+        </a>
+        <a href="book-details.html?id=paper-moths" class="arrivals-row reveal-fade">
+          <div class="an-left"><span class="an-num">04</span><div class="an-text"><span class="an-title">Paper Moths</span><span class="an-meta">Sana Iqbal &middot; <span class="an-genre">Literary Fiction</span></span></div></div>
+          <div class="an-right"><span class="an-price">$23.50</span><span class="an-arrow">&rarr;</span></div>
+        </a>
+        <a href="book-details.html?id=long-correspondence" class="arrivals-row reveal-fade">
+          <div class="an-left"><span class="an-num">05</span><div class="an-text"><span class="an-title">The Long Correspondence</span><span class="an-meta">Elliot Farr &middot; <span class="an-genre">History &amp; Ideas</span></span></div></div>
+          <div class="an-right"><span class="an-price">$26.00</span><span class="an-arrow">&rarr;</span></div>
+        </a>
+      </div>
+      <div class="center-cta"><a href="books.html#new-arrivals" class="btn btn-primary">See All New Arrivals</a></div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO STATEMENT BAND -->
+  <section style="background:var(--wine-deep);text-align:center;">
+    <div class="container wrap-narrow">
+      <span class="kicker" style="justify-content:center;color:#e7c98a;">What We Believe</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,3rem);color:#fff;">A good bookshop is local infrastructure, not a nice-to-have.</h2>
+      <p style="color:#e9ddca;max-width:560px;margin:20px auto 0;font-size:1.05rem;">Every dollar spent here stays in Millbrook roughly three times longer than a dollar spent with a warehouse three states away. That's not a slogan — it's just where the money actually goes.</p>
+    </div>
+  </section>
+
+  <!-- GENRE TICKER -->
+  <section style="background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:26px 0;">
+    <div class="ticker-strip">
+      <div class="ticker-strip-track">
+        <span>Literary Fiction</span><span class="dot">&middot;</span><span>Mystery &amp; Thriller</span><span class="dot">&middot;</span><span>History &amp; Ideas</span><span class="dot">&middot;</span><span>Children's</span><span class="dot">&middot;</span><span>Poetry</span><span class="dot">&middot;</span><span>New Arrivals</span><span class="dot">&middot;</span><span>Staff Picks</span><span class="dot">&middot;</span>
+        <span>Literary Fiction</span><span class="dot">&middot;</span><span>Mystery &amp; Thriller</span><span class="dot">&middot;</span><span>History &amp; Ideas</span><span class="dot">&middot;</span><span>Children's</span><span class="dot">&middot;</span><span>Poetry</span><span class="dot">&middot;</span><span>New Arrivals</span><span class="dot">&middot;</span><span>Staff Picks</span><span class="dot">&middot;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- READER'S CLUB BAND -->
+  <section style="background:var(--wine);color:#fdf6ea;">
+    <div class="container" style="text-align:center;">
+      <span class="kicker" style="color:#e7c98a;">Reader's Circle</span>
+      <h2 style="color:#fff;max-width:600px;margin:0 auto 10px;">First look at new arrivals, before they hit the shelf.</h2>
+      <p style="color:#e9ddca;max-width:520px;margin:0 auto 26px;">One email a month. Staff picks, event invites, and the occasional embarrassing story from behind the register.</p>
+      <form data-validate data-success-target="#bandFormSuccess" novalidate style="max-width:420px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+        <div class="field" style="flex:1;min-width:220px;margin-bottom:0;">
+          <label for="bandEmail" style="color:#fff;">Email address <span class="req">*</span></label>
+          <input id="bandEmail" type="email" required placeholder="you@email.com">
+          <span class="field-error" role="alert">Enter a valid email address.</span>
+        </div>
+        <button type="submit" class="btn btn-gold" style="align-self:flex-end;">Join</button>
+      </form>
+      <p id="bandFormSuccess" class="form-success" style="color:#fff;">You're in — welcome to the Circle.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="stitch-divider" viewBox="0 0 1200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7 H1200"/></svg>
+  <div class="container footer-top">
+    <div class="brand-block">
+      <div class="logo">The Gilded Spine</div>
+      <p>An independent bookshop for readers who like getting recommendations from real people, not algorithms.</p>
+      <span class="footer-status" data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Journal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Genres</h5>
+      <ul>
+        <li><a href="books.html#literary-fiction">Literary Fiction</a></li>
+        <li><a href="books.html#mystery-thriller">Mystery &amp; Thriller</a></li>
+        <li><a href="books.html#history-ideas">History &amp; Ideas</a></li>
+        <li><a href="books.html#childrens">Children's</a></li>
+        <li><a href="books.html#new-arrivals">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Help</h5>
+      <ul>
+        <li><a href="special-orders.html">Request a Book</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html#faq">FAQ</a></li>
+        <li><a href="404.html">404 Example</a></li>
+        <li><a href="coming-soon.html">Coming Soon</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h5>Reader's Circle</h5>
+      <p style="font-size:.85rem;color:#b9a993;margin-bottom:14px;">Monthly staff picks &amp; event invites in your inbox.</p>
+      <form data-validate data-success-target="#footerFormSuccess" novalidate>
+        <div class="field" style="margin-bottom:8px;">
+          <input type="email" required placeholder="you@email.com" aria-label="Email address">
+          <span class="field-error" role="alert">Enter a valid email address.</span>
+        </div>
+        <button type="submit" class="btn btn-gold btn-sm btn-block">Subscribe</button>
+      </form>
+      <p id="footerFormSuccess" class="form-success" style="padding:10px 0;text-align:left;font-size:.85rem;color:#d9cbb8;">Thanks — check your inbox to confirm.</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 The Gilded Spine Booksellers. All rights reserved.</span>
+    <span>Millbrook, Vermont</span>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top" type="button"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

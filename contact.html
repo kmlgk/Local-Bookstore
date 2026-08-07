@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Hours — The Gilded Spine</title>
+<meta name="description" content="Visit The Gilded Spine at 118 Elm Street, Millbrook, Vermont — hours, directions, contact form, and answers to common questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Karla:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<script>try { if (localStorage.getItem('tgs-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl'); } catch (e) {}</script>
+</head>
+<body>
+<script>try { if (localStorage.getItem('tgs-theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}</script>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="loader"><div class="loader-mark">The Gilded Spine</div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-left">
+      <span data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <span>118 Elm Street, Millbrook, VT</span>
+      <span>(802) 555-0148</span>
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container masthead-row">
+    <div class="masthead-logo">
+      <a href="index.html">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></a>
+    </div>
+    <nav class="nav-cluster" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html">Home 1</a>
+          <a href="home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a class="nav-link" href="books.html">Books</a>
+      <a class="nav-link" href="genres.html">Genres</a>
+      <a class="nav-link" href="events.html">Events</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="blog.html">Journal</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+    </nav>
+    <div class="masthead-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <a href="special-orders.html" class="btn btn-primary btn-sm request-btn">Request a Book</a>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <span class="logo">The Gilded Spine</span>
+    <div class="mobile-nav-top-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <button class="mobile-nav-close" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-nav-links" aria-label="Mobile navigation">
+    <a href="index.html">Home 1</a>
+    <a href="home-2.html">Home 2</a>
+    <a href="books.html">Books</a>
+    <a href="genres.html">Genres</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-nav-foot">
+    <a href="special-orders.html" class="btn btn-primary btn-block">Request a Book</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <span class="kicker">Visit Us</span>
+      <h1>Come browse. The kettle's usually on.</h1>
+      <p class="lead">Questions, event bookings, or just want to say hi before you stop by — here's every way to reach us.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+
+      <div class="reveal-fade">
+        <div class="form-card">
+          <h2 style="font-size:1.3rem;">Send a Message</h2>
+          <form data-validate data-success-target="#contactSuccess" novalidate style="margin-top:20px;">
+            <div class="field-row">
+              <div class="field">
+                <label for="cName">Full name <span class="req">*</span></label>
+                <input id="cName" type="text" required minlength="2" placeholder="Your name">
+                <span class="field-error" role="alert">Enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="cEmail">Email address <span class="req">*</span></label>
+                <input id="cEmail" type="email" required placeholder="you@email.com">
+                <span class="field-error" role="alert">Enter a valid email address.</span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cPhone">Phone (optional)</label>
+              <input id="cPhone" type="tel" placeholder="(802) 555-0148">
+              <span class="field-error" role="alert">Enter a valid phone number.</span>
+            </div>
+            <div class="field">
+              <label for="cSubject">Subject <span class="req">*</span></label>
+              <select id="cSubject" required>
+                <option value="">Choose one…</option>
+                <option>General question</option>
+                <option>Event booking</option>
+                <option>Special order follow-up</option>
+                <option>Selling used books</option>
+              </select>
+              <span class="field-error" role="alert">Please choose a subject.</span>
+            </div>
+            <div class="field">
+              <label for="cMsg">Message <span class="req">*</span></label>
+              <textarea id="cMsg" required minlength="10" placeholder="How can we help?"></textarea>
+              <span class="field-error" role="alert">Message must be at least 10 characters.</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+          <div class="form-success" id="contactSuccess">
+            <div class="icon">✓</div>
+            <h3>Message sent.</h3>
+            <p class="text-soft">We usually reply within one business day.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <span class="kicker">Store Info</span>
+        <h2>118 Elm Street, Millbrook, VT</h2>
+        <p class="text-soft">Two blocks off the town green, next to the old shoe-repair shop we knocked through the wall to in 2023. Street parking, plus a small lot behind the building.</p>
+        <div class="hours-card">
+          <div class="row"><span>Monday – Friday</span><span>9:00 AM – 8:00 PM</span></div>
+          <div class="row"><span>Saturday</span><span>10:00 AM – 7:00 PM</span></div>
+          <div class="row"><span>Sunday</span><span>11:00 AM – 5:00 PM</span></div>
+        </div>
+        <iframe class="map-frame mt-24" title="Map to The Gilded Spine" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-72.9%2C44.15%2C-72.86%2C44.19&layer=mapnik" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="field-hint mt-24">Prefer email? <a href="mailto:hello@thegildedspine.example" style="color:var(--wine);font-weight:700;">hello@thegildedspine.example</a> · (802) 555-0148</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" style="background:var(--surface-2);border-top:1px solid var(--border);">
+    <div class="container wrap-narrow">
+      <div class="section-head center reveal-fade">
+        <span class="kicker">Frequently Asked</span>
+        <h2>Quick Answers</h2>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="true" aria-controls="faq1">Do you special order books you don't have in stock?<span class="plus"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="accordion-panel" id="faq1" style="max-height:200px;">
+            <p>Yes — that's most of what our Special Orders service does. Fill out the form on that page or ask at the register, and we'll search our distributor and rare-book network at no charge.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq2">Can I return a special-ordered book?<span class="plus"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="accordion-panel" id="faq2">
+            <p>New special orders can be returned within 14 days in original condition. Rare or used finds are final sale, which we'll always tell you before you commit to buying.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq3">Do you offer gift wrapping?<span class="plus"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="accordion-panel" id="faq3">
+            <p>Free gift wrapping on any purchase, no minimum. We keep three paper patterns in stock and a fourth for the holidays.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq4">Is the store wheelchair accessible?<span class="plus"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="accordion-panel" id="faq4">
+            <p>Yes — street-level entry, wide aisles throughout, and an accessible restroom. The community room in back has a ramp entrance from the parking lot.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq5">Do you buy used books?<span class="plus"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="accordion-panel" id="faq5">
+            <p>We do, in good condition and in genres we actively stock. Bring up to two boxes at a time — no appointment needed, just ask at the register.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="stitch-divider" viewBox="0 0 1200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7 H1200"/></svg>
+  <div class="container footer-top">
+    <div class="brand-block">
+      <div class="logo">The Gilded Spine</div>
+      <p>An independent bookshop for readers who like getting recommendations from real people, not algorithms.</p>
+      <span class="footer-status" data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Journal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Genres</h5>
+      <ul>
+        <li><a href="books.html#literary-fiction">Literary Fiction</a></li>
+        <li><a href="books.html#mystery-thriller">Mystery &amp; Thriller</a></li>
+        <li><a href="books.html#history-ideas">History &amp; Ideas</a></li>
+        <li><a href="books.html#childrens">Children's</a></li>
+        <li><a href="books.html#new-arrivals">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Help</h5>
+      <ul>
+        <li><a href="special-orders.html">Request a Book</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html#faq">FAQ</a></li>
+        <li><a href="404.html">404 Example</a></li>
+        <li><a href="coming-soon.html">Coming Soon</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h5>Reader's Circle</h5>
+      <p style="font-size:.85rem;color:#b9a993;margin-bottom:14px;">Monthly staff picks &amp; event invites in your inbox.</p>
+      <form data-validate data-success-target="#footerFormSuccess" novalidate>
+        <div class="field" style="margin-bottom:8px;">
+          <input type="email" required placeholder="you@email.com" aria-label="Email address">
+          <span class="field-error" role="alert">Enter a valid email address.</span>
+        </div>
+        <button type="submit" class="btn btn-gold btn-sm btn-block">Subscribe</button>
+      </form>
+      <p id="footerFormSuccess" class="form-success" style="padding:10px 0;text-align:left;font-size:.85rem;color:#d9cbb8;">Thanks — check your inbox to confirm.</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 The Gilded Spine Booksellers. All rights reserved.</span>
+    <span>Millbrook, Vermont</span>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top" type="button"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

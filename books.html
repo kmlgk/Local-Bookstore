@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books — Browse the Catalog | The Gilded Spine</title>
+<meta name="description" content="Browse and filter The Gilded Spine's full catalog by genre and price, sort by what matters to you, and switch between grid and list view.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Karla:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<script>try { if (localStorage.getItem('tgs-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl'); } catch (e) {}</script>
+</head>
+<body>
+<script>try { if (localStorage.getItem('tgs-theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}</script>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="loader"><div class="loader-mark">The Gilded Spine</div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-left">
+      <span data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <span>118 Elm Street, Millbrook, VT</span>
+      <span>(802) 555-0148</span>
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container masthead-row">
+    <div class="masthead-logo">
+      <a href="index.html">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></a>
+    </div>
+    <nav class="nav-cluster" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html">Home 1</a>
+          <a href="home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a class="nav-link active" href="books.html">Books</a>
+      <a class="nav-link" href="genres.html">Genres</a>
+      <a class="nav-link" href="events.html">Events</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="blog.html">Journal</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <div class="masthead-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <a href="special-orders.html" class="btn btn-primary btn-sm request-btn">Request a Book</a>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <span class="logo">The Gilded Spine</span>
+    <div class="mobile-nav-top-actions">
+      <button class="icon-toggle" data-theme-toggle type="button">DARK</button>
+      <button class="icon-toggle" data-dir-toggle type="button">RTL</button>
+      <button class="mobile-nav-close" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-nav-links" aria-label="Mobile navigation">
+    <a href="index.html">Home 1</a>
+    <a href="home-2.html">Home 2</a>
+    <a href="books.html">Books</a>
+    <a href="genres.html">Genres</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-nav-foot">
+    <a href="special-orders.html" class="btn btn-primary btn-block">Request a Book</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-banner banner-textured" style="padding-bottom:34px;">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Books</div>
+      <span class="kicker">Full Catalog</span>
+      <h1>Every shelf, in one place.</h1>
+      <p class="lead">15,000+ titles represented by 18 in-depth listings here — three per section. Filter by genre or price, sort however you like, or just search for a title.</p>
+      <div class="book-search-wrap mt-24">
+        <input type="search" data-book-search placeholder="Search by title or author…" aria-label="Search books by title or author" style="width:100%;max-width:460px;padding:14px 18px;border:1.5px solid var(--border);background:var(--surface);color:var(--ink);font-size:.95rem;">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:44px;">
+    <div class="container">
+      <div class="shop-layout">
+
+        <aside class="shop-sidebar" aria-label="Filter books">
+          <div class="filter-group">
+            <h4>Genre</h4>
+            <label class="filter-row"><input type="checkbox" data-filter-genre value="literary-fiction"><span class="fr-label">Literary Fiction</span><span class="fr-count">3</span></label>
+            <label class="filter-row"><input type="checkbox" data-filter-genre value="mystery-thriller"><span class="fr-label">Mystery &amp; Thriller</span><span class="fr-count">3</span></label>
+            <label class="filter-row"><input type="checkbox" data-filter-genre value="history-ideas"><span class="fr-label">History &amp; Ideas</span><span class="fr-count">3</span></label>
+            <label class="filter-row"><input type="checkbox" data-filter-genre value="childrens"><span class="fr-label">Children's</span><span class="fr-count">3</span></label>
+            <label class="filter-row"><input type="checkbox" data-filter-genre value="poetry"><span class="fr-label">Poetry</span><span class="fr-count">3</span></label>
+            <label class="filter-row"><input type="checkbox" data-filter-genre value="new-arrivals"><span class="fr-label">New Arrivals</span><span class="fr-count">3</span></label>
+          </div>
+          <div class="filter-group">
+            <h4>Price</h4>
+            <label class="filter-row"><input type="radio" name="price" data-filter-price value="any" checked><span class="fr-label">Any price</span></label>
+            <label class="filter-row"><input type="radio" name="price" data-filter-price value="u18"><span class="fr-label">Under $18</span></label>
+            <label class="filter-row"><input type="radio" name="price" data-filter-price value="18-24"><span class="fr-label">$18 – $24</span></label>
+            <label class="filter-row"><input type="radio" name="price" data-filter-price value="24-28"><span class="fr-label">$24 – $28</span></label>
+            <label class="filter-row"><input type="radio" name="price" data-filter-price value="28p"><span class="fr-label">$28 and up</span></label>
+          </div>
+          <div class="filter-group">
+            <button type="button" class="filter-clear" data-clear-filters>Clear all filters</button>
+          </div>
+        </aside>
+
+        <div>
+          <div class="shop-toolbar">
+            <span class="count"><strong data-shop-count>18</strong> books found</span>
+            <div class="shop-toolbar-right">
+              <select class="shop-sort" data-shop-sort aria-label="Sort books">
+                <option value="featured">Sort: Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="title">Title: A–Z</option>
+              </select>
+              <div class="view-toggle" role="group" aria-label="Switch view">
+                <button type="button" data-view-toggle="grid" class="active" aria-label="Grid view"><i class="fa-solid fa-table-cells-large"></i></button>
+                <button type="button" data-view-toggle="list" aria-label="List view"><i class="fa-solid fa-bars"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-empty" data-shop-empty>
+            <h3>No matches on the shelf.</h3>
+            <p class="text-soft">We might still be able to find it. <a href="special-orders.html" style="color:var(--wine);font-weight:700;">Ask us to source it →</a></p>
+          </div>
+
+          <div class="shop-grid" data-shop-grid>
+
+            <article class="spine-card reveal" data-genre="literary-fiction" data-price="24.00" data-title="The Weight of Small Rooms"><div class="spine-stripe" style="background:#6e2439;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">The Weight of Small Rooms</span></div><div class="spine-body"><span class="genre-label">Literary Fiction</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=weight-of-small-rooms">The Weight of Small Rooms</a></h3><span class="author">Naomi Fisk</span><div class="spine-foot"><span class="spine-price">$24.00</span><a href="book-details.html?id=weight-of-small-rooms" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="literary-fiction" data-price="22.50" data-title="Everything We Didn't Say"><div class="spine-stripe" style="background:#6e2439;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">Everything We Didn't Say</span></div><div class="spine-body"><span class="genre-label">Literary Fiction</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=everything-we-didnt-say">Everything We Didn't Say</a></h3><span class="author">Colm Bright</span><div class="spine-foot"><span class="spine-price">$22.50</span><a href="book-details.html?id=everything-we-didnt-say" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="literary-fiction" data-price="23.00" data-title="A Longer Kind of Day"><div class="spine-stripe" style="background:#6e2439;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1494548162494-384bba4ab999?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">A Longer Kind of Day</span></div><div class="spine-body"><span class="genre-label">Literary Fiction</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=a-longer-kind-of-day">A Longer Kind of Day</a></h3><span class="author">Priya Nathan</span><div class="spine-foot"><span class="spine-price">$23.00</span><a href="book-details.html?id=a-longer-kind-of-day" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="mystery-thriller" data-price="27.00" data-title="The Last Ferry to Greywater"><div class="spine-stripe" style="background:#25303f;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">Staff Pick</span><span class="cover-title">The Last Ferry to Greywater</span></div><div class="spine-body"><span class="genre-label">Mystery &amp; Thriller</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=last-ferry-to-greywater">The Last Ferry to Greywater</a></h3><span class="author">Owen Castellan</span><div class="spine-foot"><span class="spine-price">$27.00</span><a href="book-details.html?id=last-ferry-to-greywater" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="mystery-thriller" data-price="25.50" data-title="What the Tide Keeps"><div class="spine-stripe" style="background:#25303f;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">What the Tide Keeps</span></div><div class="spine-body"><span class="genre-label">Mystery &amp; Thriller</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=what-the-tide-keeps">What the Tide Keeps</a></h3><span class="author">Selin Marek</span><div class="spine-foot"><span class="spine-price">$25.50</span><a href="book-details.html?id=what-the-tide-keeps" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="mystery-thriller" data-price="24.00" data-title="Six Missing Hours"><div class="spine-stripe" style="background:#25303f;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1495364141860-b0d03eccd065?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">Trending</span><span class="cover-title">Six Missing Hours</span></div><div class="spine-body"><span class="genre-label">Mystery &amp; Thriller</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=six-missing-hours">Six Missing Hours</a></h3><span class="author">Danilo Reyes</span><div class="spine-foot"><span class="spine-price">$24.00</span><a href="book-details.html?id=six-missing-hours" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="history-ideas" data-price="29.00" data-title="Salt, Smoke &amp; Empire"><div class="spine-stripe" style="background:#5c5230;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1476820865390-c52aeebb9891?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">Salt, Smoke &amp; Empire</span></div><div class="spine-body"><span class="genre-label">History &amp; Ideas</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=salt-smoke-empire">Salt, Smoke &amp; Empire</a></h3><span class="author">Rosalind Achebe</span><div class="spine-foot"><span class="spine-price">$29.00</span><a href="book-details.html?id=salt-smoke-empire" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="history-ideas" data-price="27.50" data-title="The Quiet Architects"><div class="spine-stripe" style="background:#5c5230;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">The Quiet Architects</span></div><div class="spine-body"><span class="genre-label">History &amp; Ideas</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=quiet-architects">The Quiet Architects</a></h3><span class="author">Tobias Lindqvist</span><div class="spine-foot"><span class="spine-price">$27.50</span><a href="book-details.html?id=quiet-architects" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="history-ideas" data-price="22.00" data-title="A Short History of Almost Everyone"><div class="spine-stripe" style="background:#5c5230;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">Trending</span><span class="cover-title">A Short History of Almost Everyone</span></div><div class="spine-body"><span class="genre-label">History &amp; Ideas</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=short-history-of-almost-everyone">A Short History of Almost Everyone</a></h3><span class="author">Meredith Okafor</span><div class="spine-foot"><span class="spine-price">$22.00</span><a href="book-details.html?id=short-history-of-almost-everyone" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="childrens" data-price="16.00" data-title="Pip and the Paper Forest"><div class="spine-stripe" style="background:#1f6f6b;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">Trending</span><span class="cover-title">Pip and the Paper Forest</span></div><div class="spine-body"><span class="genre-label">Children's</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=pip-and-the-paper-forest">Pip and the Paper Forest</a></h3><span class="author">Junie Alders</span><div class="spine-foot"><span class="spine-price">$16.00</span><a href="book-details.html?id=pip-and-the-paper-forest" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="childrens" data-price="17.50" data-title="The Marvelous Misfit Menagerie"><div class="spine-stripe" style="background:#1f6f6b;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1476611317561-60117649dd94?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">The Marvelous Misfit Menagerie</span></div><div class="spine-body"><span class="genre-label">Children's</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=marvelous-misfit-menagerie">The Marvelous Misfit Menagerie</a></h3><span class="author">Toby Quill</span><div class="spine-foot"><span class="spine-price">$17.50</span><a href="book-details.html?id=marvelous-misfit-menagerie" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="childrens" data-price="15.00" data-title="Luna Finds Her Roar"><div class="spine-stripe" style="background:#1f6f6b;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">Luna Finds Her Roar</span></div><div class="spine-body"><span class="genre-label">Children's</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=luna-finds-her-roar">Luna Finds Her Roar</a></h3><span class="author">Ade Osei</span><div class="spine-foot"><span class="spine-price">$15.00</span><a href="book-details.html?id=luna-finds-her-roar" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="poetry" data-price="19.00" data-title="Small Weather"><div class="spine-stripe" style="background:#5b3a66;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">Trending</span><span class="cover-title">Small Weather</span></div><div class="spine-body"><span class="genre-label">Poetry</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=small-weather">Small Weather</a></h3><span class="author">Inès Duval</span><div class="spine-foot"><span class="spine-price">$19.00</span><a href="book-details.html?id=small-weather" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="poetry" data-price="18.50" data-title="Where the Light Pools"><div class="spine-stripe" style="background:#5b3a66;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">Where the Light Pools</span></div><div class="spine-body"><span class="genre-label">Poetry</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=where-the-light-pools">Where the Light Pools</a></h3><span class="author">Xavier Monroe</span><div class="spine-foot"><span class="spine-price">$18.50</span><a href="book-details.html?id=where-the-light-pools" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="poetry" data-price="17.00" data-title="The Kitchen at Midnight"><div class="spine-stripe" style="background:#5b3a66;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="cover-title">The Kitchen at Midnight</span></div><div class="spine-body"><span class="genre-label">Poetry</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=kitchen-at-midnight">The Kitchen at Midnight</a></h3><span class="author">Rene Aubert</span><div class="spine-foot"><span class="spine-price">$17.00</span><a href="book-details.html?id=kitchen-at-midnight" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="new-arrivals" data-price="25.00" data-title="The Understory"><div class="spine-stripe" style="background:#8f6527;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">New</span><span class="cover-title">The Understory</span></div><div class="spine-body"><span class="genre-label">Literary Fiction</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=understory">The Understory</a></h3><span class="author">Callum Ness</span><div class="spine-foot"><span class="spine-price">$25.00</span><a href="book-details.html?id=understory" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="new-arrivals" data-price="24.50" data-title="Nine Days in Rennwick"><div class="spine-stripe" style="background:#8f6527;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">New</span><span class="cover-title">Nine Days in Rennwick</span></div><div class="spine-body"><span class="genre-label">Mystery</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=nine-days-in-rennwick">Nine Days in Rennwick</a></h3><span class="author">Adaeze Obi</span><div class="spine-foot"><span class="spine-price">$24.50</span><a href="book-details.html?id=nine-days-in-rennwick" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+            <article class="spine-card reveal" data-genre="new-arrivals" data-price="27.00" data-title="The Wren King"><div class="spine-stripe" style="background:#8f6527;"></div><div class="spine-cover" style="background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=70');background-size:cover;background-position:center;"><span class="spine-tag">Trending</span><span class="cover-title">The Wren King</span></div><div class="spine-body"><span class="genre-label">Fantasy</span><h3 style="font-size:1rem;margin:0;"><a href="book-details.html?id=wren-king">The Wren King</a></h3><span class="author">Bastian Voss</span><div class="spine-foot"><span class="spine-price">$27.00</span><a href="book-details.html?id=wren-king" class="btn btn-outline btn-sm">Details</a></div></div></article>
+
+          </div>
+
+          <nav class="pagination" data-pagination aria-label="Books pagination"></nav>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:60px;">
+    <div class="container">
+      <div class="section-head center reveal-fade">
+        <span class="kicker">Reader Notes</span>
+        <h2>What people say about browsing here.</h2>
+      </div>
+      <div class="quote-grid">
+        <div class="quote-card reveal-fade">
+          <span class="mark">"</span>
+          <div class="stars">★★★★★</div>
+          <blockquote>The filters actually work the way I browse in person — by genre first, then price. Found three books in under a minute.</blockquote>
+          <div class="byline"><span class="avatar" style="background:#6e2439;">JL</span><div><strong>Jordan L.</strong><span>Online order, Millbrook</span></div></div>
+        </div>
+        <div class="quote-card reveal-fade">
+          <span class="mark">"</span>
+          <div class="stars">★★★★★</div>
+          <blockquote>Ordered a hardcover for pickup after browsing on my lunch break. It was ready behind the counter by the time I walked over.</blockquote>
+          <div class="byline"><span class="avatar" style="background:#25303f;">AM</span><div><strong>Ana M.</strong><span>Store pickup</span></div></div>
+        </div>
+        <div class="quote-card reveal-fade">
+          <span class="mark">"</span>
+          <div class="stars">★★★★★</div>
+          <blockquote>Sorted by price to fit a gift budget, and the list view made it easy to compare five books at a glance. Small thing, big help.</blockquote>
+          <div class="byline"><span class="avatar" style="background:#5b3a66;">KP</span><div><strong>Kai P.</strong><span>Gift order</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface-2);border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head center reveal-fade">
+        <span class="kicker">Shipping &amp; Pickup</span>
+        <h2>Order online, however you'd like it delivered.</h2>
+      </div>
+      <div class="stepper">
+        <div class="step reveal-fade"><span class="step-num">1</span><h4>Add to your order</h4><p>Browse or filter, then reserve or request any title on this page.</p></div>
+        <div class="step reveal-fade"><span class="step-num">2</span><h4>Choose pickup or shipping</h4><p>Free pickup at the register, usually same-day for in-stock titles.</p></div>
+        <div class="step reveal-fade"><span class="step-num">3</span><h4>We confirm by text or email</h4><p>Shipping typically arrives in 3–5 business days within Vermont.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head center reveal-fade">
+        <span class="kicker">The Shop, By the Numbers</span>
+        <h2>Every shelf, counted.</h2>
+      </div>
+      <div class="stamp-strip">
+        <div class="stamp-item"><strong data-count-to="15000">0</strong><span>Titles in Stock</span></div>
+        <div class="stamp-item"><strong data-count-to="6">0</strong><span>Genre Sections</span></div>
+        <div class="stamp-item"><strong data-count-to="24">0</strong><span>New Arrivals / Month</span></div>
+        <div class="stamp-item"><strong data-count-to="9">0</strong><span>Avg. Days to Source</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order-band">
+    <div class="container" style="text-align:center;">
+      <span class="kicker">Not on the Shelf?</span>
+      <h2>We'll find it — free to ask.</h2>
+      <a href="special-orders.html" class="btn btn-primary mt-24">Request a Book</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="stitch-divider" viewBox="0 0 1200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7 H1200"/></svg>
+  <div class="container footer-top">
+    <div class="brand-block">
+      <div class="logo">The Gilded Spine</div>
+      <p>An independent bookshop for readers who like getting recommendations from real people, not algorithms.</p>
+      <span class="footer-status" data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Journal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Genres</h5>
+      <ul>
+        <li><a href="books.html#literary-fiction">Literary Fiction</a></li>
+        <li><a href="books.html#mystery-thriller">Mystery &amp; Thriller</a></li>
+        <li><a href="books.html#history-ideas">History &amp; Ideas</a></li>
+        <li><a href="books.html#childrens">Children's</a></li>
+        <li><a href="books.html#new-arrivals">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Help</h5>
+      <ul>
+        <li><a href="special-orders.html">Request a Book</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html#faq">FAQ</a></li>
+        <li><a href="404.html">404 Example</a></li>
+        <li><a href="coming-soon.html">Coming Soon</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h5>Reader's Circle</h5>
+      <p style="font-size:.85rem;color:#b9a993;margin-bottom:14px;">Monthly staff picks &amp; event invites in your inbox.</p>
+      <form data-validate data-success-target="#footerFormSuccess" novalidate>
+        <div class="field" style="margin-bottom:8px;">
+          <input type="email" required placeholder="you@email.com" aria-label="Email address">
+          <span class="field-error" role="alert">Enter a valid email address.</span>
+        </div>
+        <button type="submit" class="btn btn-gold btn-sm btn-block">Subscribe</button>
+      </form>
+      <p id="footerFormSuccess" class="form-success" style="padding:10px 0;text-align:left;font-size:.85rem;color:#d9cbb8;">Thanks — check your inbox to confirm.</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 The Gilded Spine Booksellers. All rights reserved.</span>
+    <span>Millbrook, Vermont</span>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top" type="button"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
