@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Karla:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="assets/images/favicon.png" type="image/png">
 <script>try { if (localStorage.getItem('tgs-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl'); } catch (e) {}</script>
 </head>
 <body>
@@ -32,7 +32,7 @@
 <header class="masthead">
   <div class="container masthead-row">
     <div class="masthead-logo">
-      <a href="index.html">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></a>
+      <a href="index.html"><img src="assets/images/logo-mark.png" alt="" class="logo-mark"><span class="logo-text">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></span></a>
     </div>
     <nav class="nav-cluster" aria-label="Primary navigation">
       <div class="nav-dropdown">
@@ -86,13 +86,13 @@
 
 <main id="main">
 
-  <section class="page-banner banner-textured" style="padding-bottom:34px;">
+  <section class="page-banner banner-textured" style="padding:100px 0;text-align:center;">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Books</div>
-      <span class="kicker">Full Catalog</span>
-      <h1>Every shelf, in one place.</h1>
-      <p class="lead">15,000+ titles represented by 18 in-depth listings here — three per section. Filter by genre or price, sort however you like, or just search for a title.</p>
-      <div class="book-search-wrap mt-24">
+      <div class="breadcrumb" style="justify-content:center;display:flex;"><a href="index.html">Home</a> / Books</div>
+      <span class="kicker" style="justify-content:center;">Full Catalog</span>
+      <h1 style="margin-left:auto;margin-right:auto;">Every shelf, in one place.</h1>
+      <p class="lead" style="margin-left:auto;margin-right:auto;">15,000+ titles represented by 18 in-depth listings here — three per section. Filter by genre or price, sort however you like, or just search for a title.</p>
+      <div class="book-search-wrap mt-24" style="margin-left:auto;margin-right:auto;">
         <input type="search" data-book-search placeholder="Search by title or author…" aria-label="Search books by title or author" style="width:100%;max-width:460px;padding:14px 18px;border:1.5px solid var(--border);background:var(--surface);color:var(--ink);font-size:.95rem;">
       </div>
     </div>
@@ -266,7 +266,7 @@
   <svg class="stitch-divider" viewBox="0 0 1200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7 H1200"/></svg>
   <div class="container footer-top">
     <div class="brand-block">
-      <div class="logo">The Gilded Spine</div>
+      <a href="index.html" class="logo"><img src="assets/images/logo-mark.png" alt="" class="logo-mark"><span class="logo-text">The Gilded Spine<span class="sub">Est. 2011 · Independent Bookshop</span></span></a>
       <p>An independent bookshop for readers who like getting recommendations from real people, not algorithms.</p>
       <span class="footer-status" data-store-status><span class="status-dot"></span> <span data-status-label>Open now</span></span>
       <div class="footer-social">
@@ -315,7 +315,7 @@
         </div>
         <button type="submit" class="btn btn-gold btn-sm btn-block">Subscribe</button>
       </form>
-      <p id="footerFormSuccess" class="form-success" style="padding:10px 0;text-align:left;font-size:.85rem;color:#d9cbb8;">Thanks — check your inbox to confirm.</p>
+      <p id="footerFormSuccess" class="form-success" style="padding:10px 0;font-size:.85rem;color:#d9cbb8;">Thanks — check your inbox to confirm.</p>
     </div>
   </div>
   <div class="container footer-bottom">

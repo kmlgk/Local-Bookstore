@@ -157,7 +157,7 @@ section { padding: 88px 0; }
 .utility-right { display: flex; align-items: center; gap: 14px; }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #8fd9a0; display: inline-block; box-shadow: 0 0 0 2px rgba(143,217,160,.35); }
 .status-dot.closed { background: #e8a6a6; box-shadow: 0 0 0 2px rgba(232,166,166,.35); }
-@media (max-width: 780px) { .utility-left span:not(:first-child) { display: none; } }
+@media (max-width: 780px) { .utility-left > span:not(:first-child) { display: none; } }
 
 .icon-toggle {
   width: 34px; height: 34px; border-radius: 50%;
@@ -184,7 +184,8 @@ section { padding: 88px 0; }
 }
 .masthead-logo { text-align: left; flex-shrink: 0; }
 [dir="rtl"] .masthead-logo { text-align: right; }
-.masthead-logo a { font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; letter-spacing: .01em; }
+.masthead-logo a { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; letter-spacing: .01em; }
+.masthead-logo .logo-mark { height: 42px; width: auto; display: block; flex-shrink: 0; }
 .masthead-logo .sub { display: block; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .28em; text-transform: uppercase; color: var(--ink-soft); margin-top: 1px; }
 
 .nav-cluster { display: flex; align-items: center; gap: 24px; flex: 1; justify-content: center; }
@@ -251,6 +252,16 @@ body.dark .nav-dropdown-menu a:hover, body.dark .nav-dropdown-menu a.active { co
   .nav-cluster { display: none; }
   .masthead-actions .icon-toggle { display: none; }
 }
+@media (max-width: 600px) {
+  .masthead-logo a { gap: 8px; font-size: 1.15rem; }
+  .masthead-logo .logo-mark { height: 34px; }
+  .masthead-logo .sub { font-size: .5rem; letter-spacing: .14em; }
+}
+@media (max-width: 360px) {
+  .masthead-logo .sub { display: none; }
+  .masthead-logo a { gap: 6px; font-size: 1rem; }
+  .masthead-logo .logo-mark { height: 28px; }
+}
 [dir="rtl"] .masthead-row { direction: rtl; }
 
 /* Full-screen mobile nav takeover */
@@ -308,23 +319,26 @@ body.nav-open { overflow: hidden; }
 .hero-book-spread {
   position: relative; z-index: 2; width: 100%;
   padding-top: 130px; padding-bottom: 90px;
+  display: flex; justify-content: center; text-align: center;
 }
 .hero-book-page {
   max-width: 640px;
   position: relative;
-  padding-left: 34px;
+  padding-left: 0;
+  padding-top: 24px;
 }
 .hero-book-page::before {
-  content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px;
-  background: linear-gradient(180deg, transparent, rgba(184,134,62,.9), transparent);
+  content: ""; position: absolute; left: 50%; top: 0; width: 90px; height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(184,134,62,.9), transparent);
 }
-[dir="rtl"] .hero-book-page { padding-left: 0; padding-right: 34px; }
-[dir="rtl"] .hero-book-page::before { left: auto; right: 0; }
+[dir="rtl"] .hero-book-page { padding-left: 0; padding-right: 0; }
+[dir="rtl"] .hero-book-page::before { left: 50%; right: auto; }
 .hero-book-page .kicker { color: #e7c98a; }
 .hero-book h1 { font-size: clamp(2rem, 3.6vw, 3.3rem); line-height: 1.12; color: #fff; }
 .hero-book h1 em { font-style: italic; color: #e7c98a; }
-.hero-book p.lead { font-size: 1.15rem; color: #e9ddca; max-width: 520px; }
-.hero-book-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+.hero-book p.lead { font-size: 1.15rem; color: #e9ddca; max-width: 520px; margin-left: auto; margin-right: auto; }
+.hero-book-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
 
 .hero-ticker {
   position: relative; z-index: 2;
@@ -341,18 +355,19 @@ body.nav-open { overflow: hidden; }
 [dir="rtl"] .hero-ticker-track { animation-direction: reverse; }
 
 .stamp-card {
-  position: absolute; z-index: 3; left: 50px; bottom: -46px;
+  position: absolute; z-index: 3; left: 50%; bottom: -46px;
+  transform: translateX(-50%);
   background: var(--surface); color: var(--ink);
   border: 1px solid var(--border);
   padding: 18px 22px; display: flex; gap: 24px;
   box-shadow: 0 20px 40px -18px rgba(var(--shadow), .5);
 }
-[dir="rtl"] .stamp-card { left: auto; right: 50px; }
+[dir="rtl"] .stamp-card { left: 50%; right: auto; }
 .stamp-card .item { text-align: center; }
 .stamp-card .item strong { display: block; font-family: var(--font-mono); font-size: 1.5rem; color: var(--wine); }
 body.dark .stamp-card .item strong { color: var(--gold); }
 .stamp-card .item span { font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-soft); }
-@media (max-width: 700px) { .stamp-card { position: static; margin: -1px 24px 0; box-shadow: none; border-top: none; justify-content: space-around; } }
+@media (max-width: 700px) { .stamp-card { position: static; left: auto; transform: none; margin: -1px 24px 0; box-shadow: none; border-top: none; justify-content: space-around; } }
 
 /* ==========================================================================
    Hero 2 — Card Catalog (graphic / skeuomorphic)
@@ -454,7 +469,7 @@ body.dark .page-banner .breadcrumb a:hover { color: var(--gold); }
 .page-banner p.lead { color: var(--ink-soft); max-width: 560px; font-size: 1.05rem; }
 
 /* ==========================================================================
-   Genre pills (Home 1)
+   Genre pills (Journal category filter)
    ========================================================================== */
 .pill-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .genre-pill {
@@ -464,6 +479,70 @@ body.dark .page-banner .breadcrumb a:hover { color: var(--gold); }
 }
 .genre-pill:hover { border-color: var(--wine); color: var(--wine); transform: translateY(-2px); }
 body.dark .genre-pill:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ==========================================================================
+   Shelf Wall — signature "browse by section" display (Home 1)
+   A row of book-spine cards resting on a wood-toned ledge, each spine
+   pulling upward on hover like it's being drawn off the shelf.
+   ========================================================================== */
+.shelf-spine-row {
+  display: flex; align-items: flex-end; gap: 14px;
+  padding: 0 6px;
+}
+.shelf-spine {
+  flex: 1 1 0; min-width: 0; height: 260px;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  padding: 26px 8px 20px;
+  border-radius: 7px 7px 3px 3px;
+  background: linear-gradient(200deg, var(--spine) 0%, var(--spine-dark) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.1), inset -6px 0 10px -6px rgba(0,0,0,.35), 0 16px 20px -16px rgba(0,0,0,.6);
+  color: #fdf6ea; text-decoration: none;
+  position: relative; transition: transform .35s cubic-bezier(.2,.8,.3,1), box-shadow .35s ease;
+}
+.shelf-spine::after {
+  content: ""; position: absolute; left: 10px; right: 10px; top: 14px; bottom: 14px;
+  border: 1px solid rgba(255,255,255,.16); border-radius: 3px; pointer-events: none;
+}
+.shelf-spine:hover, .shelf-spine:focus-visible {
+  transform: translateY(-22px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), inset -6px 0 10px -6px rgba(0,0,0,.35), 0 30px 28px -18px rgba(0,0,0,.55);
+}
+.spine-icon { font-size: 1.15rem; opacity: .92; }
+.spine-label {
+  writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
+  font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: .01em;
+  line-height: 1.2; white-space: nowrap;
+}
+.spine-count {
+  font-family: var(--font-mono); font-size: .62rem; text-transform: uppercase; letter-spacing: .1em;
+  opacity: .85; white-space: nowrap;
+}
+.shelf-ledge {
+  height: 16px; margin: 0 6px;
+  background: linear-gradient(180deg, #a2764a 0%, #7a5230 100%);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 14px 22px -12px rgba(0,0,0,.45);
+}
+body.dark .shelf-ledge { background: linear-gradient(180deg, #6b4a2c 0%, #4a3220 100%); }
+[dir="rtl"] .spine-label { transform: rotate(0deg); }
+
+/* Below 900px there isn't reliably enough height per spine for vertical
+   text to lay out on one line, so the shelf becomes a stack of horizontal
+   tiles instead of forcing text to wrap into unreadable extra columns. */
+@media (max-width: 900px) {
+  .shelf-spine-row { flex-direction: column; align-items: stretch; gap: 12px; }
+  .shelf-spine {
+    height: auto; min-height: 0; flex-direction: row; align-items: center;
+    justify-content: flex-start; gap: 16px; padding: 18px 22px; border-radius: 10px;
+  }
+  .spine-icon { font-size: 1.3rem; flex: 0 0 auto; }
+  .spine-label {
+    writing-mode: horizontal-tb; transform: none; flex: 1 1 auto;
+    font-size: 1.1rem; white-space: normal;
+  }
+  .spine-count { flex: 0 0 auto; }
+  .shelf-ledge { display: none; }
+}
 
 /* ==========================================================================
    Spine card — dog-ear fold + left spine stripe (book listings)
@@ -557,7 +636,7 @@ body.dark .spine-price { color: var(--gold); }
   display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 1rem;
 }
 .pick-staff strong { display: block; font-size: .88rem; }
-.pick-staff span { font-size: .72rem; color: var(--ink-soft); }
+.pick-staff span:not(.pick-avatar) { font-size: .72rem; color: var(--ink-soft); }
 .pick-quote {
   margin: 0; font-family: var(--font-display); font-style: italic; font-size: .96rem; line-height: 1.45; color: var(--ink-soft);
   border-left: 2px solid var(--gold); padding-left: 12px;
@@ -644,7 +723,7 @@ body.dark .spotlight-thumb.active, body.dark .spotlight-thumb:hover { border-col
 .drawer-tab:hover { transform: translateY(-6px); }
 .drawer-tab .tag { font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; opacity: .85; margin-bottom: 6px; }
 .drawer-tab h3 { color: #fff; font-size: 1.3rem; margin-bottom: 4px; }
-.drawer-tab p { color: rgba(255,255,255,.82); font-size: .84rem; margin: 0; }
+.drawer-tab p { color: rgba(255,255,255,.82); font-size: .84rem; line-height: 1.4; margin: 0; min-height: 2.8em; }
 @media (max-width: 900px) { .drawer-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .drawer-grid { grid-template-columns: 1fr; } }
 
@@ -671,6 +750,7 @@ body.dark .spotlight-thumb.active, body.dark .spotlight-thumb:hover { border-col
 .quote-card {
   background: var(--surface); padding: 30px 26px 26px; position: relative; height: 100%;
   border: 1px solid var(--border); border-bottom: none;
+  display: flex; flex-direction: column;
 }
 .quote-card::after {
   content: ""; display: block; height: 12px; margin-top: 4px;
@@ -681,12 +761,14 @@ body.dark .spotlight-thumb.active, body.dark .spotlight-thumb:hover { border-col
 .quote-card .mark { font-family: var(--font-display); font-size: 3rem; color: var(--gold); line-height: 1; margin-bottom: 6px; }
 .quote-card .stars { color: var(--gold); font-size: .85rem; margin-bottom: 10px; letter-spacing: 2px; }
 .quote-card blockquote { margin: 0 0 16px; font-size: .96rem; color: var(--ink-soft); font-style: italic; }
-.quote-card .byline { display: flex; align-items: center; gap: 10px; }
+.quote-card .byline { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 16px; }
 .quote-card .avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; color: #fff; font-size: .95rem; flex-shrink: 0; }
 .quote-card .byline strong { display: block; font-size: .87rem; }
-.quote-card .byline span { font-size: .76rem; color: var(--ink-soft); }
+.quote-card .byline span:not(.avatar) { font-size: .76rem; color: var(--ink-soft); }
 @media (max-width: 900px) { .quote-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .quote-grid { grid-template-columns: 1fr; } }
+.tablet-only-card { display: none; }
+@media (max-width: 900px) and (min-width: 561px) { .tablet-only-card { display: block; } }
 
 /* ==========================================================================
    Special order band
@@ -800,6 +882,9 @@ body.dark .event-date-chip .day { color: var(--gold); }
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 @media (max-width: 980px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .team-grid { grid-template-columns: 1fr; } }
+.team-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .team-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .team-grid-3 { grid-template-columns: 1fr; } }
 .library-card {
   background: var(--surface); border: 1px solid var(--border); padding: 0; overflow: hidden;
 }
@@ -1068,14 +1153,21 @@ body.dark .map-frame { filter: grayscale(.4) invert(.9) hue-rotate(180deg); }
 /* ==========================================================================
    Footer — binding-stitch top edge
    ========================================================================== */
-.site-footer { background: var(--ink); color: #d9cbb8; position: relative; margin-top: 40px; }
+.site-footer { background: var(--ink); color: #d9cbb8; position: relative; }
 body.dark .site-footer { background: #100b09; }
 .stitch-divider { display: block; width: 100%; height: 14px; }
 .stitch-divider path { stroke: var(--gold); stroke-width: 2; stroke-dasharray: 7 7; fill: none; }
 .footer-top { padding-top: 68px; padding-bottom: 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr; gap: 32px; }
 @media (max-width: 980px) { .footer-top { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .footer-top { grid-template-columns: 1fr; } }
-.footer-top .brand-block .logo { font-family: var(--font-display); font-size: 1.5rem; color: #fff; font-weight: 700; }
+.footer-top .brand-block .logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.5rem; color: #fff; font-weight: 700; }
+.footer-top .brand-block .logo .logo-mark { height: 40px; width: auto; display: block; flex-shrink: 0; }
+.footer-top .brand-block .logo .sub { display: block; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: #a3927c; font-weight: 500; margin-top: 4px; white-space: nowrap; }
+@media (max-width: 420px) {
+  .footer-top .brand-block .logo { gap: 8px; font-size: 1.15rem; }
+  .footer-top .brand-block .logo .logo-mark { height: 32px; }
+  .footer-top .brand-block .logo .sub { font-size: .48rem; letter-spacing: .06em; white-space: normal; }
+}
 .footer-top .brand-block p { color: #b9a993; font-size: .88rem; margin: 12px 0 16px; max-width: 260px; }
 .footer-status { display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-family: var(--font-mono); }
 .footer-social { display: flex; gap: 10px; margin-top: 16px; }
@@ -1087,6 +1179,13 @@ body.dark .site-footer { background: #100b09; }
 .footer-top ul a:hover { color: var(--gold); }
 .footer-newsletter input { width: 100%; padding: 11px 12px; border: 1px solid #45392e; background: #241a16; color: #fff; font-size: .85rem; margin-bottom: 10px; }
 .footer-bottom { border-top: 1px solid #372b23; padding-top: 20px; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; font-size: .8rem; color: #a3927c; flex-wrap: wrap; gap: 10px; }
+
+/* RTL — footer text stays left-ragged by default (unicode-bidi: plaintext
+   resolves English content to its own LTR run), so it needs the same
+   explicit right-alignment used elsewhere in the template for RTL mode. */
+[dir="rtl"] .footer-top,
+[dir="rtl"] .footer-bottom { text-align: right; }
+[dir="rtl"] .footer-newsletter input { text-align: right; }
 
 /* ==========================================================================
    Back to top
